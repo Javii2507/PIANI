@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Administrador PIANI</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="Law Firm Website Template" name="keywords">
+        <meta content="Law Firm Website Template" name="description">
+            <script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="js/Funciones.js"></script>
+
+        <!-- Favicon -->
+        <link href="img/favicon.ico" rel="icon">
+
+        <!-- Google Font -->
+        <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@1,600;1,700;1,800&family=Roboto:wght@400;500&display=swap" rel="stylesheet"> 
+        
+        <!-- CSS Libraries -->
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+        <link href="lib/animate/animate.min.css" rel="stylesheet">
+        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+        <!-- Template Stylesheet -->
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+
+    <body>
+        <div class="wrapper">
+            <!-- Top Bar Start -->
+            <div class="top-bar">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-3">
+                            <div class="logo">
+                                <a href="index.html">
+                                    <h1>UPTEX</h1>
+                                    <!-- <img src="img/logo.jpg" alt="Logo"> -->
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-lg-9">
+                            <div class="top-bar-right">
+                                <div class="text">
+                                    <h2>8:00 - 20:00</h2>
+                                    <p>Horario de atencion</p>
+                                </div>
+                                <div class="text">
+                                    <h2>595 921 3027 </h2>
+                                    <p>Telefono de Contacto</p>
+                                </div>
+                                <div class="social">
+                                    <a href="https://twitter.com/uptexcoco"><i class="fab fa-twitter"></i></a>
+                                    <a href="https://www.facebook.com/UPTexcoco/"><i class="fab fa-facebook-f"></i></a>
+                                    <a href="https://www.youtube.com/channel/UCbdrtz6WKaZqpWIuVvp5PRA"><i class="fab fa-youtube"></i></a>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Top Bar End -->
+            
+            
+            <!-- Page Header Start -->
+            <div class="page-header">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <h2>Acerca de la Universidad</h2>
+                        </div>
+                        <div class="col-12">
+                            <a href="index.html">Pagina Principal</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Page Header End -->
+
+
+           <div class="wrapper row1">
+  
+</div>
+
+<div class="container mt-3">
+
+  <!-- Nav tabs -->
+  <ul class="nav nav-tabs">
+    <li class="nav-item">
+      <a class="btn btn-dark" data-toggle="tab" href="#home">Area de trabajo</a>
+    </li>
+    <li class="nav-item">
+      <a class="btn btn-dark" data-toggle="tab" href="#menu1">Documentos PIANI</a>
+    </li>
+    <li class="nav-item">
+      <a class="btn btn-dark" data-toggle="tab" href="#menu2">Manual Usuario y Manual Tecnico</a>
+    </li>
+        <li class="nav-item">
+      <a class="btn btn-dark" data-toggle="tab" href="#menu3">Presentaciones</a>
+    </li>
+        <li class="nav-item">
+      <a class="btn btn-dark" data-toggle="tab" href="#menu4">Tareas Asignadas</a>
+    </li>
+            <li class="nav-item">
+      <a class="btn btn-dark" data-toggle="tab" href="#menu5">Administrador de Usarios</a>
+    </li>
+
+  </ul>
+
+
+
+  <!-- Tab panes -->
+  <div class="tab-content">
+    <div id="home" class="container tab-pane active"><br>
+      <div class="alert alert-success">
+</div>
+      <h3>Area de Trabajo</h3>
+<table>
+<th colspan="2">Bienvenido admin</th><th><a href="index.html">Regresar</a></th>
+<tr><th colspan="3"><h1>Listado de usuarios</h1></th></tr>
+<tr>
+<th>Usuario</th>
+<th>Contraseña</th>
+<th>Rol</th>
+
+</tr>
+
+<?php
+
+ include('conexion.php');
+
+$sql="select * from login";
+$resultado=mysqli_query($conn,$sql);
+
+while($mostrar=mysqli_fetch_array($resultado))
+
+{
+?>
+
+<tr>
+	<td><?php echo $mostrar['usuario'] ?></td>
+	<td><?php echo $mostrar['pass'] ?></td>
+	<td><?php echo $mostrar['rol'] ?></td>
+</tr>
+
+<?php
+}
+?>
+
+</table>
+  <img src="img/inicio.jpg" class="img-thumbnail" alt="Cinque Terre">
+    </div>
+
+
+    <div id="menu1" class="container tab-pane fade"><br>
+<h3>Vision UPTEX</h3>
+<p>
+    
+    Ser una institución líder de educación superior, reconocida por su calidad y competitividad educativa, participando en el desarrollo económico y social a nivel regional, nacional e internacional, implementando modelos educativos innovadores que permitan la mejora continua en nuestros servicios.
+</p>
+       <img src="Img/vision.jpg" class="img-thumbnail" alt="Cinque Terre">
+    </div>
+
+
+
+    <div id="menu2" class="container tab-pane fade"><br>
+      <h3>Politica de Calidad UPTEX</h3>
+      <p>La Universidad Politécnica de Texcoco. es una institución comprometida a proporcionar servicios de educación superior de calidad, para la formación de profesionistas, mediante nuestro modelo educativo basado en competencias profesionales, enfocado a mejorar continuamente la eficacia de nuestro Sistema de Gestión de la Calidad, que garantiza el cumplimiento de los requerimientos del estudiante y partes interesadas.
+      </p><br><br>
+
+      <img src="Img/politica.jpg" class="img-thumbnail" alt="Cinque Terre">
+    </div>
+
+
+
+    <div id="menu3" class="container tab-pane fade"><br>
+      <h3>Carreras</h3>
+<br><br>
+      <br>
+      <center><img src="img/Logo.jpg" class="rounded-circle" alt="Cinque Terre"></center><br><br>
+      <br>
+      <p>
+<ul>
+<li>
+<b>Ingenieria en Sistemas Computacionales:</b><br><br>
+Será capaz de realizar una implementación y administración de soluciones de negocios para la investigación basadas en computadoras, con una amplia visión de la ciencia y las nuevas tecnologías de la información, por tal motivo podrá especificar, diseñar, construir, implantar, verificar, auditar, evaluar y mantener sistemas de tecnología informática que respondan a las necesidades de sus usuarios, mejorando los niveles de eficiencia, eficacia y productividad de las organizaciones en el entorno globalizado.<br><br></li>
+<li>
+<b>Ingeniería En Electrónica Y Telecomunicaciones:</b><br><br>
+Formar profesionistas competentes, para analizar, diseñar, desarrollar, instalar, operar y dar mantenimiento a los equipos y sistemas electrónicos y de telecomunicaciones; comprometidos con el desarrollo tecnológico, económico, social y ambiental de la región en la que se desempeñe profesionalmente.<br><br></li>
+<li>
+<b>Ingeniería En Robótica:</b><br><br>
+
+Automatizar Sistemas de producción mediante las tecnologías mecánica, neumática, hidráulica, eléctrica y robótica para la mejora continua en los procesos. Mejorar Sistemas de automatización empleando tecnologías de vanguardias para incrementar la eficacia del equipo. Supervisar líneas de producción para monitorear la fabricación de productos según las normas de calidad establecidas para el proceso. Dirigir los programas de mantenimiento industrial para la prevención y corrección de fallas, considerando los requerimientos individuales de los equipos. Proponer proyectos de innovación tecnológica para resolver problemas del sector productivo, mediante el uso de tecnología. Desarrollar proyectos de innovación tecnológica para resolver problemas del sector productivo, mediante el uso de tecnología adecuada. Evaluar Cursos y programas de capacitación Mediante un análisis de competencias requeridas por el cliente para la actualización de tecnologías utilizadas en los procesos de producción. Proporcionar servicios de consultoría para incrementar el nivel de competencia de los miembros de la organización.<br><br></li>
+
+<li><b>Ingeniería En Logística Y Transporte:</b><br><br>
+
+Formar Ingenieros(as) en Logística y Transporte, con capacidades, habilidades y destrezas para liderar y emprender empresas y proyectos en esta disciplina, comprometidos con la moral y la ética, con sólidos conocimientos en Logística Integral, Gestión de Operaciones, Optimización de Procesos y del Transporte, que contribuyan al desarrollo del país y la región, para generar investigación a niveles de excelencia en estas áreas. Campo Laboral Investigación y Desarrollo de Sistemas Logísticos Ingeniería de Proyectos Optimizar los programas de distribución y transportación Optimizar la operación de centros de distribución Implantar proyectos de inversión en logística y transporte Realizar mapeo de procesos mediante el análisis de procedimientos y de instrucciones Control de flotillas de trasporte.<br><br></li>
+
+<li><b>Licenciatura En Administración Y Gestión Empresarial:</b><br><br>
+
+Formar profesionistas con capacidades gerenciales altamente competitivos que respondan a los desafíos a los que se enfrentan las organizaciones en ambientes de incertidumbre, dirigiendo eficazmente sus recursos y funciones, a través de una visión vanguardista para diseñar, evaluar y aplicar estrategias que permitan innovar o mejorar procesos en las organizaciones en un marco de sustentabilidad.<br><br></li>
+
+<li><b>Licenciatura En Comercio Internacional Y Aduanas:</b><br><br>
+
+Formar profesionistas conscientes de la realidad social, apoyados en el conocimiento de las ciencias, económico – administrativas, capaces de crear, dirigir, asesorar organizaciones competitivas y sustentables en el ámbito del comercio internacional y la gestión en las aduanas, en el entorno dinámico que plantea el proceso de globalización.<br><br></li>
+
+</p>
+</ul>
+    </div>
+
+  </div>
+</div>
+            <div class="footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6 col-lg-4">
+      <h6 class="heading">Para mas informacion</h6>
+      <p class="nospace btmspace-15">Nosotros te contactamos</p>
+      <form method="post" action="#">
+        <fieldset>
+          <legend>Informacion</legend>
+          <input class="btmspace-15" type="text" value="" placeholder="Nombre">
+          <input class="btmspace-15" type="text" value="" placeholder="Correo electronico">
+          <button type="submit" value="submit">Enviar</button>
+        </fieldset>
+      </form>
+    </div>
+
+                        <div class="col-md-6 col-lg-4">
+                            <div class="footer-contact">
+                                <h2>Direccion</h2>
+                                <p><i class="fa fa-map-marker-alt"></i>Carretera Federal los Reyes - Texcoco 14.200 San Miguel Coatlinchan, 56250 Texcoco, Méx.</p>
+                                <p><i class="fa fa-phone-alt"></i> 595 921 3027 </p>
+                                <p><i class="fa fa-envelope"></i>UPTEXCOCO@edu.mx</p>
+                                <div class="footer-social">
+                                    <a href="https://twitter.com/uptexcoco"><i class="fab fa-twitter"></i></a>
+                                    <a href="https://www.facebook.com/UPTexcoco/"><i class="fab fa-facebook-f"></i></a>
+                                    <a href="https://www.youtube.com/channel/UCbdrtz6WKaZqpWIuVvp5PRA"><i class="fab fa-youtube"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <div class="container footer-menu">
+                    <div class="f-menu">
+                        <a href="">Terms of use</a>
+                        <a href="">Privacy policy</a>
+                        <a href="">Cookies</a>
+                        <a href="">Help</a>
+                        <a href="">FQAs</a>
+                    </div>
+                </div>
+                <div class="container copyright">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <p>&copy; <a href="https://htmlcodex.com/law-firm-website-template">HTML Codex</a>, All Right Reserved.</p>
+                        </div>
+                        <div class="col-md-6">
+                            <p>Designed By <a href="https://htmlcodex.com">HTML Codex</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Footer End -->
+            
+            <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+        </div>
+
+        <!-- JavaScript Libraries -->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+        <script src="lib/easing/easing.min.js"></script>
+        <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+        <script src="lib/isotope/isotope.pkgd.min.js"></script>
+
+        <!-- Template Javascript -->
+        <script src="js/main.js"></script>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
