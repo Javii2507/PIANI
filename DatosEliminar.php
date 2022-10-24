@@ -11,7 +11,7 @@
 		echo "Eliminado correctamente";
 	}else
 	{
-		echo "No Eliminado";
+		echo "No Eliminao";
 	}
 
 
